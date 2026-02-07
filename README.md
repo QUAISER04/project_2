@@ -1,28 +1,33 @@
-# Data Analytics in Sales Domain
+# 📊 Sales Analysis Dashboard
 
-## Overview
-This project focuses on applying data analytics techniques to the sales domain. The goal is to derive insights that can help improve sales performance and drive business strategies.
+A simple and interactive dashboard to explore sales data, analyze trends, and view top-performing products.
 
-## Excel Sheet
-- The Excel file provided in the repository is used in the project.
+## Features
+- **Sales Trends**: See how sales have changed over time (monthly/yearly).
+- **Regional Analysis**: View sales performance by region.
+- **Top Products**: Identify the best-selling products.
+- **Key Metrics**: actionable insights on Total Sales, Profit, and Orders.
 
-## Files Included
-- Detailed reports
-- Code files
-- Documentation on analytics methodologies
-- Visualizations and dashboards
+## How to Run
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/QUAISER04/project_2.git
+   cd project_2
+   ```
 
-## How to Contribute
-1. Star the repository if you find it useful.
-2. Leave a comment with your thoughts or questions.
-3. Share the project with others who might benefit from it.
+2. **Set up the environment:**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt
+   ```
 
-## Video
-Project Video: https://youtu.be/LOPnZclka0o
+3. **Run the App:**
+   ```bash
+   streamlit run app.py
+   ```
 
-## Contact
-For inquiries or collaboration opportunities, please reach out via GitHub.
-
----
-
-Thank you for your support! Your engagement helps improve the project and make more resources available.
+## Project Structure
+- `app.py`: The main application file.
+- `data/`: Contains the Excel dataset.
+- `src/`: Contains code for loading data and creating charts.
