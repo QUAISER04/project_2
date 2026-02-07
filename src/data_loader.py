@@ -32,14 +32,27 @@ def clean_data(sheets):
     
     # 1. Merge Data
     # Merge Sales with Customers
-    # Note: Using 'Customer Name Index' as key based on notebook inspection
-    df_merged = pd.merge(df_sales, df_customers, on='Customer Name Index', how='left')
+    # Sales has 'Customer Name Index', Customers has 'Customer Index'
+    df_merged = pd.merge(df_sales, df_customers, left_on='Customer Name Index', right_on='Customer Index', how='left')
     
     # Merge with Products
-    df_merged = pd.merge(df_merged, df_products, on='Product Description Index', how='left')
+    # Products sheet has 'Index' and 'Product Name'
+    df_merged = pd.merge(df_merged, df_products, left_on='Product Description Index', right_on='Index', how='left')
     
     # Merge with Regions
-    df_merged = pd.merge(df_merged, df_regions, on='Delivery Region Index', how='left')
+    # Regions usually has 'Index' too? Let's assume 'Index' based on pattern or 'Delivery Region Index' match.
+    # Previous code assumed 'Delivery Region Index' mapping.
+    # If df_regions has 'Index', we map 'Delivery Region Index' -> 'Index'
+    # Let's inspect quietly or try the most common pattern.
+    # Given other sheets use 'Index', Regions likely does too.
+    if 'Index' in df_regions.columns:
+        df_merged = pd.merge(df_merged, df_regions, left_on='Delivery Region Index', right_on='Index', how='left')
+    else:
+        # Fallback to direct merge if column names match (unlikely if others didn't)
+        # Try to find the index column
+        region_key = [col for col in df_regions.columns if 'Index' in col]
+        if region_key:
+             df_merged = pd.merge(df_merged, df_regions, left_on='Delivery Region Index', right_on=region_key[0], how='left')
     
     # 2. Date Handling
     # Ensure OrderDate is datetime

@@ -1,10 +1,9 @@
 # 📊 Sales Domain
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python)
-![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=for-the-badge&logo=streamlit)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas)
 
-A professional, interactive dashboard designed to transform raw sales data into actionable business insights. This project replaces static reports with a dynamic tool for exploring trends, regional performance, and product success.
+A professional tool designed to transform raw sales data into actionable business insights. This project uses Python to calculate key metrics and generate interactive charts.
 
 ---
 
@@ -13,18 +12,17 @@ A professional, interactive dashboard designed to transform raw sales data into 
 *   **📈 Dynamic Trends**: Visualize how sales and profit margins evolve over time.
 *   **🌍 Regional Insights**: Drill down into performance by specific regions.
 *   **🏆 Product Rankings**: Instantly identify your top-selling items.
-*   **⚡ Interactive Filters**: Slice and dice data by Year and Region in real-time.
+*   **⚡ Automated Reports**: Calculates Total Sales, Profit, and Orders instantly.
 
 ## 🛠️ Tech Stack
 
 *   **Logic**: Python (Pandas, Numpy)
 *   **Visualization**: Plotly Express
-*   **Interface**: Streamlit
 
 ## 📂 Project Structure
 
 ```text
-├── app.py                  # The main application dashboard
+├── main.py                 # The main analysis script
 ├── src/
 │   ├── data_loader.py      # Handles data loading & cleaning
 │   └── visualizations.py   # Generates the charts
@@ -34,7 +32,7 @@ A professional, interactive dashboard designed to transform raw sales data into 
 
 ## 🏁 Getting Started
 
-Follow these simple steps to run the dashboard on your machine.
+Follow these simple steps to run the analysis on your machine.
 
 ### 1. Clone the Repository
 ```bash
@@ -53,12 +51,12 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Run the Dashboard
+### 3. Run the Analysis
 ```bash
-streamlit run app.py
+python3 main.py
 ```
 
-The app will open automatically in your browser at `http://localhost:8501`.
+The script will output key metrics to the terminal and open interactive charts in your default browser.
 
 ---
 
