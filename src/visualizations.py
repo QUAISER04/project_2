@@ -54,3 +54,8 @@ def plot_key_metrics(df):
     col1.metric("Total Sales", f"${total_sales:,.2f}")
     col2.metric("Total Profit", f"${total_profit:,.2f}")
     col3.metric("Total Orders", f"{total_orders:,}")
+
+if __name__ == "__main__":
+    st.error("⚠️ **Configuration Error**")
+    st.warning("Streamlit is running `src/visualizations.py`, but this is just a helper file.")
+    st.info("👉 Please go to your Streamlit Cloud **Settings** and change the **Main file path** to `streamlit_app.py`.")
