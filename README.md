@@ -24,7 +24,7 @@ A professional, interactive dashboard designed to transform raw sales data into 
 ## 📂 Project Structure
 
 ```text
-├── app.py                  # The main application dashboard (ENTRY POINT)
+├── streamlit_app.py        # The main application dashboard (ENTRY POINT)
 ├── src/
 │   ├── data_loader.py      # Handles data loading & cleaning
 │   └── visualizations.py   # Charting logic
@@ -55,7 +55,7 @@ pip install -r requirements.txt
 
 ### 3. Run the Dashboard
 ```bash
-streamlit run app.py
+streamlit run streamlit_app.py
 ```
 
 The app will open automatically in your browser at `http://localhost:8501`.
@@ -65,8 +65,7 @@ The app will open automatically in your browser at `http://localhost:8501`.
 When deploying to Streamlit Cloud:
 1.  **Repository**: Select `QUAISER04/project_2`.
 2.  **Branch**: `main`.
-3.  **Main file path**: Ensure this is set to `app.py`.  
-    *(Note: If it defaults to `src/visualizations.py`, change it manually or the app will not load.)*
+3.  **Main file path**: `streamlit_app.py` (Streamlit should detect this automatically).
 
 ---
 
