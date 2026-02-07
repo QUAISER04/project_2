@@ -4,10 +4,10 @@ from src.data_loader import load_data, clean_data
 from src.visualizations import plot_sales_trend, plot_sales_by_region, plot_top_products, plot_key_metrics
 
 # Page Config
-st.set_page_config(page_title="Sales Analysis Dashboard", layout="wide")
+st.set_page_config(page_title="Sales Domain", layout="wide")
 
 # Title
-st.title("📊 Regional Sales Analysis Dashboard")
+st.title("📊 Sales Domain")
 st.markdown("Interactive dashboard to explore sales performance, trends, and profitability.")
 
 # Load Data
